@@ -12,7 +12,7 @@ function ContactPage() {
           <a href="mailto:dinmail@example.com">dinmail@example.com</a>
         </li>
         <li>
-          <a href="https://github.com/brugernavn" rel="noreferrer" target="_blank">
+          <a href="https://github.com/username" rel="noreferrer" target="_blank">
             GitHub
           </a>
         </li>

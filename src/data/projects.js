@@ -11,11 +11,11 @@ const projects = [
     links: [
       {
         label: "Live site",
-        href: "https://brugernavn.github.io",
+        href: "https://username.github.io",
       },
       {
         label: "GitHub repo",
-        href: "https://github.com/brugernavn/brugernavn.github.io",
+        href: "https://github.com/username/username.github.io",
       },
     ],
   },

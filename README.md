@@ -1,24 +1,32 @@
-# React Portfolio Template
+# username.github.io
 
-Denne guide viser, hvordan du opretter din egen portfolio ud fra dette template repository.
+Dette repository er en React portfolio-template til GitHub Pages.
 
-Portfolioen deployes automatisk til GitHub Pages og kommer til at ligge på:
-
-```text
-https://[brugernavn].github.io
-```
-
-Derfor skal dit nye repository hedde præcis:
+Studerende skal bruge templaten til at oprette deres eget repository med navnet:
 
 ```text
-[brugernavn].github.io
+[dit-github-brugernavn].github.io
 ```
 
-Hvis dit GitHub-brugernavn er `hullabulla`, skal dit repository hedde:
+Hvis dit GitHub-brugernavn er `sofieholm`, skal dit repository hedde:
 
 ```text
-hullabulla.github.io
+sofieholm.github.io
 ```
+
+Når portfolioen er deployet, ligger den på:
+
+```text
+https://[dit-github-brugernavn].github.io
+```
+
+## Template repository
+
+Template-repositoryet ligger her:
+
+[github.com/cederdorff/username.github.io](https://github.com/cederdorff/username.github.io)
+
+Navnet `username.github.io` er kun et eksempelnavn i templaten. Når du opretter dit eget repository, skal `username` erstattes med dit eget GitHub-brugernavn.
 
 ## Hvad templaten indeholder
 
@@ -30,12 +38,6 @@ hullabulla.github.io
 - automatisk deployment til GitHub Pages med `.github/workflows/deploy.yml`
 
 ## Eksempler fra tidligere studerende
-
-Når portfolioen er deployet, ligger den på:
-
-```text
-https://[brugernavn].github.io
-```
 
 Her er eksempler på tidligere studerendes deployede portfolioer:
 
@@ -54,11 +56,13 @@ Guiden antager, at du allerede har:
 - GitHub Desktop
 - en GitHub-konto
 
-Du skal ikke oprette et Vite-projekt selv. Du skal bruge denne template.
+Du skal ikke oprette et Vite-projekt selv. Du skal bruge templaten.
 
 ## 1. Opret dit repository fra templaten
 
-Gå ind på template-repositoryet på GitHub.
+Gå til template-repositoryet:
+
+[github.com/cederdorff/username.github.io](https://github.com/cederdorff/username.github.io)
 
 Klik på:
 
@@ -69,7 +73,7 @@ Use this template -> Create a new repository
 Udfyld:
 
 - `Owner`: din egen GitHub-bruger
-- `Repository name`: `[brugernavn].github.io`
+- `Repository name`: `[dit-github-brugernavn].github.io`
 - `Visibility`: `Public`
 
 Eksempel:
@@ -86,16 +90,33 @@ Create repository
 
 Vigtigt:
 
-- Repository-navnet skal være fuldstændig magen til dit GitHub-brugernavn efterfulgt af `.github.io`.
-- Brug ikke navne som `portfolio`, `my-portfolio`, `sofie-portfolio` eller `sofieholm.github`.
+- Brug dit eget GitHub-brugernavn i repository-navnet.
+- Repository-navnet skal ende på `.github.io`.
 - Brug `Use this template`, ikke `Fork`.
+- Dit repository skal ikke hedde `username.github.io`, medmindre dit GitHub-brugernavn faktisk er `username`.
+
+Forkerte eksempler:
+
+```text
+portfolio
+my-portfolio
+sofie-portfolio
+sofieholm.github
+username.github.io
+```
+
+Korrekt eksempel, hvis brugernavnet er `sofieholm`:
+
+```text
+sofieholm.github.io
+```
 
 ## 2. Klon med GitHub Desktop
 
 Når dit repository er oprettet:
 
 1. Gå ind på dit nye repository på GitHub.
-2. Kontroller igen, at repository-navnet er korrekt: `[brugernavn].github.io`.
+2. Kontroller igen, at repository-navnet er korrekt: `[dit-github-brugernavn].github.io`.
 3. Klik på den grønne `Code`-knap.
 4. Vælg `Open with GitHub Desktop`.
 5. Vælg, hvor projektmappen skal ligge på din computer.
@@ -196,7 +217,9 @@ Ret:
 src/data/projects.js
 ```
 
-Hvert projekt ser sådan ud:
+Template-projekterne bruger `username` som placeholder. Ret links, så de passer til dit eget GitHub-brugernavn.
+
+Eksempel på et projekt:
 
 ```js
 {
@@ -210,10 +233,21 @@ Hvert projekt ser sådan ud:
   links: [
     {
       label: "Live site",
-      href: "https://brugernavn.github.io",
+      href: "https://username.github.io",
+    },
+    {
+      label: "GitHub repo",
+      href: "https://github.com/username/username.github.io",
     },
   ],
 }
+```
+
+Hvis dit GitHub-brugernavn er `sofieholm`, skal du ændre links til:
+
+```js
+href: "https://sofieholm.github.io"
+href: "https://github.com/sofieholm/sofieholm.github.io"
 ```
 
 `slug` bliver brugt i URL'en.
@@ -257,7 +291,7 @@ public/todo-app.webp
 Så kan du bruge billedet i `src/data/projects.js`:
 
 ```js
-image: `${import.meta.env.BASE_URL}todo-app.webp`;
+image: `${import.meta.env.BASE_URL}todo-app.webp`
 ```
 
 ### Ret om-mig-side
@@ -283,6 +317,12 @@ Ret:
 - mailadresse
 - GitHub-link
 - LinkedIn-link
+
+Hvis dit GitHub-brugernavn er `sofieholm`, skal GitHub-linket fx være:
+
+```text
+https://github.com/sofieholm
+```
 
 ### Ret design
 
@@ -368,7 +408,7 @@ Actions
 Når deployment er færdig, ligger portfolioen på:
 
 ```text
-https://[brugernavn].github.io
+https://[dit-github-brugernavn].github.io
 ```
 
 Det kan tage et par minutter, før siden er online.
@@ -399,6 +439,7 @@ Ikke:
 portfolio
 sofie-portfolio
 sofieholm.github
+username.github.io
 ```
 
 ### Siden er ikke online
@@ -417,8 +458,13 @@ Tjek:
 - at `slug` i `src/data/projects.js` ikke har mellemrum
 - at linket matcher projektets slug
 - at projektet findes i arrayet
+- at du har skiftet `username` ud med dit eget GitHub-brugernavn i links
 
 ## Til underviseren
+
+Template-repositoryet er:
+
+[github.com/cederdorff/username.github.io](https://github.com/cederdorff/username.github.io)
 
 For at de studerende kan bruge repoet som template:
 
@@ -426,4 +472,4 @@ For at de studerende kan bruge repoet som template:
 2. Gå til `General`.
 3. Slå `Template repository` til.
 
-Når det er slået til, kan de studerende oprette deres eget `[brugernavn].github.io` repository direkte fra templaten.
+Når det er slået til, kan de studerende oprette deres eget `[dit-github-brugernavn].github.io` repository direkte fra templaten.
