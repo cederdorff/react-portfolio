@@ -8,10 +8,10 @@ Brug templaten til at oprette dit eget repository med navnet:
 [dit-github-brugernavn].github.io
 ```
 
-Hvis dit GitHub-brugernavn er `sofieholm`, skal dit repository hedde:
+Hvis dit GitHub-brugernavn er `hullabulla`, skal dit repository hedde:
 
 ```text
-sofieholm.github.io
+hullabulla.github.io
 ```
 
 Når portfolioen er deployet, ligger den på:
@@ -83,12 +83,12 @@ Udfyld:
 Eksempel:
 
 ```text
-sofieholm.github.io
+hullabulla.github.io
 ```
 
 ![Opret nyt repository fra templaten](docs/images/create-repository-from-template.png)
 
-Billedet viser eksemplet med GitHub-brugeren `race-js`. Derfor oprettes repositoryet som `race-js.github.io`, og portfolioen kommer til at ligge på `https://race-js.github.io`.
+Billedet viser eksemplet med GitHub-brugeren `race-js`. Derfor oprettes repositoryet som `race-js.github.io`, og portfolioen kommer til at ligge på [`https://race-js.github.io`](https://race-js.github.io).
 
 Klik derefter på:
 
@@ -117,10 +117,10 @@ sofieholm.github
 username.github.io
 ```
 
-Korrekt eksempel, hvis brugernavnet er `sofieholm`:
+Korrekt eksempel, hvis brugernavnet er `race-js`:
 
 ```text
-sofieholm.github.io
+race-js.github.io
 ```
 
 ## 2. Klon med GitHub Desktop
@@ -225,7 +225,7 @@ Find teksten:
 Ret den til noget simpelt, fx:
 
 ```jsx
-<h1>Hej, jeg hedder Sofie.</h1>
+<h1>Hej, jeg hedder RACE.</h1>
 ```
 
 Gem filen.
@@ -419,11 +419,11 @@ Eksempel på et projekt:
 }
 ```
 
-Hvis dit GitHub-brugernavn er `sofieholm`, skal du ændre links til:
+Hvis dit GitHub-brugernavn er `race-js`, skal du ændre links til:
 
 ```js
-href: "https://sofieholm.github.io"
-href: "https://github.com/sofieholm/sofieholm.github.io"
+href: "https://race-js.github.io";
+href: "https://github.com/race-js/race-js.github.io";
 ```
 
 `slug` bliver brugt i URL'en.
@@ -467,7 +467,7 @@ public/todo-app.webp
 Så kan du bruge billedet i `src/data/projects.js`:
 
 ```js
-image: `${import.meta.env.BASE_URL}todo-app.webp`
+image: `${import.meta.env.BASE_URL}todo-app.webp`;
 ```
 
 ### Brug om-mig-siden som template
@@ -494,10 +494,10 @@ Ret:
 - GitHub-link
 - LinkedIn-link
 
-Hvis dit GitHub-brugernavn er `sofieholm`, skal GitHub-linket fx være:
+Hvis dit GitHub-brugernavn er `race-js`, skal GitHub-linket fx være:
 
 ```text
-https://github.com/sofieholm
+https://github.com/race-js
 ```
 
 ### Brug designet som template
@@ -594,10 +594,10 @@ Hver gang du vil ændre portfolioen:
 
 ### Repositoryet har forkert navn
 
-Hvis dit GitHub-brugernavn er `sofieholm`, skal repositoryet hedde:
+Hvis dit GitHub-brugernavn er `race-js`, skal repositoryet hedde:
 
 ```text
-sofieholm.github.io
+race-js.github.io
 ```
 
 Ikke:
@@ -606,6 +606,8 @@ Ikke:
 portfolio
 sofie-portfolio
 sofieholm.github
+race-js.github
+race-js.io
 username.github.io
 ```
 
