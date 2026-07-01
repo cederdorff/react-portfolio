@@ -28,6 +28,10 @@ Template-repositoryet ligger her:
 
 Navnet `username.github.io` er kun et eksempelnavn i templaten. Når du opretter dit eget repository, skal `username` erstattes med dit eget GitHub-brugernavn.
 
+Billederne i guiden bruger GitHub-brugeren `race-js` som eksempel. Derfor hedder eksemplets repository `race-js.github.io`, og den deployede portfolio ligger på `https://race-js.github.io`. Du skal bruge dit eget GitHub-brugernavn i stedet.
+
+![Template-repository med Use this template-menuen åben](docs/images/use-template-menu.png)
+
 ## Hvad templaten indeholder
 
 - Vite + React
@@ -82,11 +86,19 @@ Eksempel:
 sofieholm.github.io
 ```
 
+![Opret nyt repository fra templaten](docs/images/create-repository-from-template.png)
+
+Billedet viser eksemplet med GitHub-brugeren `race-js`. Derfor oprettes repositoryet som `race-js.github.io`, og portfolioen kommer til at ligge på `https://race-js.github.io`.
+
 Klik derefter på:
 
 ```text
 Create repository
 ```
+
+GitHub opretter nu dit repository. Det tager normalt kun et øjeblik.
+
+![GitHub genererer det nye repository](docs/images/generating-repository.png)
 
 Vigtigt:
 
@@ -119,9 +131,26 @@ Når dit repository er oprettet:
 2. Kontroller igen, at repository-navnet er korrekt: `[dit-github-brugernavn].github.io`.
 3. Klik på den grønne `Code`-knap.
 4. Vælg `Open with GitHub Desktop`.
-5. Vælg, hvor projektmappen skal ligge på din computer.
-6. Klik på `Clone`.
-7. Klik på `Open in Visual Studio Code` i GitHub Desktop.
+
+![Open with GitHub Desktop fra dit nye repository](docs/images/open-with-github-desktop.png)
+
+På billedet hedder repositoryet `race-js.github.io`, fordi eksemplet bruger GitHub-brugeren `race-js`.
+
+GitHub Desktop åbner nu et vindue, hvor du kan vælge, hvor projektmappen skal ligge på din computer.
+
+![Klon repository i GitHub Desktop](docs/images/github-desktop-clone.png)
+
+Klik på:
+
+```text
+Clone
+```
+
+Når projektet er klonet, skal du klikke på:
+
+```text
+Open in Visual Studio Code
+```
 
 Fra nu af arbejder du primært i VS Code. Du kan committe og pushe med GitHub Desktop eller med Source Control i VS Code.
 
@@ -149,11 +178,17 @@ Kør:
 npm run dev
 ```
 
-Åbn den lokale URL i browseren. Den er typisk:
+VS Code viser nu en lokal URL i terminalen. Den er typisk:
 
 ```text
 http://localhost:5173
 ```
+
+![VS Code med npm install og npm run dev](docs/images/vscode-install-and-dev-server.png)
+
+Åbn den lokale URL i browseren.
+
+![Portfolioen vist lokalt i browseren](docs/images/localhost-before-change.png)
 
 Tjek disse sider:
 
@@ -195,6 +230,8 @@ Ret den til noget simpelt, fx:
 
 Gem filen.
 
+![Ret navnet i HomePage.jsx](docs/images/vscode-edit-homepage-name.png)
+
 ## 6. Test før du pusher første gang
 
 Kør:
@@ -233,6 +270,8 @@ Vælg:
 Source: GitHub Actions
 ```
 
+Når din første deployment er kørt, kan du også se den live URL på denne side.
+
 ## 8. Commit og push
 
 Brug enten GitHub Desktop eller Source Control i VS Code.
@@ -252,6 +291,8 @@ Med VS Code:
 4. Klik på `Commit`.
 5. Klik på `Sync Changes` eller `Push`.
 
+![Commit den lille ændring i VS Code](docs/images/vscode-commit-small-change.png)
+
 Når du har pushet til `main`, kører deployment automatisk.
 
 Du kan se deployment under:
@@ -259,6 +300,16 @@ Du kan se deployment under:
 ```text
 Actions
 ```
+
+![GitHub Actions kører deployment](docs/images/github-actions-running.png)
+
+Når workflowet er færdigt, skal det være grønt.
+
+![GitHub Actions er færdig uden fejl](docs/images/github-actions-success-list.png)
+
+Du kan klikke ind på workflowet og se selve deploy-linket.
+
+![Deploy-workflow med link til den publicerede side](docs/images/github-actions-success-detail.png)
 
 Når deployment er færdig, ligger portfolioen på:
 
@@ -278,11 +329,25 @@ https://[dit-github-brugernavn].github.io
 
 Tjek at den lille tekstændring fra trin 5 er synlig online.
 
+![Portfolioen er publiceret på GitHub Pages](docs/images/deployed-after-change.png)
+
+Billedet viser den deployede portfolio på `https://race-js.github.io`, fordi eksemplet er lavet med GitHub-brugeren `race-js`.
+
 Hvis du kan se ændringen, virker deployment.
+
+Du kan også se den publicerede URL under:
+
+```text
+Settings -> Pages
+```
+
+![GitHub Pages viser den publicerede URL](docs/images/github-pages-settings.png)
 
 ## 10. Tilpas portfolioen
 
 Når deployment virker, kan du begynde at gøre portfolioen personlig.
+
+Templaten er lavet, så du kan bruge de eksisterende sider, komponenter, projekter og styles som udgangspunkt. Start med at ændre lidt ad gangen, test lokalt, og byg videre på det, der allerede virker.
 
 Start med disse filer:
 
@@ -296,7 +361,7 @@ src/index.css
 index.html
 ```
 
-### Ret navn og navigation
+### Brug navigationen som template
 
 Åbn:
 
@@ -304,9 +369,9 @@ index.html
 src/components/Navbar.jsx
 ```
 
-Ret `Dit Navn` til dit eget navn.
+Ret `Dit Navn` til dit eget navn. Du kan også bruge de eksisterende links som template, hvis du senere vil tilføje flere sider.
 
-### Ret forsiden
+### Brug forsiden som template
 
 Åbn:
 
@@ -314,13 +379,13 @@ Ret `Dit Navn` til dit eget navn.
 src/pages/HomePage.jsx
 ```
 
-Ret:
+Brug den eksisterende struktur som udgangspunkt, og ret:
 
 - navn
 - intro-tekst
 - faglig retning
 
-### Ret projekter
+### Brug projekterne som template
 
 Åbn:
 
@@ -328,7 +393,7 @@ Ret:
 src/data/projects.js
 ```
 
-Template-projekterne bruger `username` som placeholder. Ret links, så de passer til dit eget GitHub-brugernavn.
+Hvert projekt i listen er en template, du kan kopiere, ændre eller slette. Template-projekterne bruger `username` som placeholder. Ret links, så de passer til dit eget GitHub-brugernavn.
 
 Eksempel på et projekt:
 
@@ -384,7 +449,7 @@ weather-app
 ux-case
 ```
 
-### Ret billeder
+### Brug billederne som template
 
 Læg projektbilleder i:
 
@@ -405,7 +470,7 @@ Så kan du bruge billedet i `src/data/projects.js`:
 image: `${import.meta.env.BASE_URL}todo-app.webp`
 ```
 
-### Ret om-mig-side
+### Brug om-mig-siden som template
 
 Åbn:
 
@@ -413,9 +478,9 @@ image: `${import.meta.env.BASE_URL}todo-app.webp`
 src/pages/AboutPage.jsx
 ```
 
-Ret teksten, så den passer til dig.
+Brug teksten som udgangspunkt, og skriv den om, så den passer til dig.
 
-### Ret kontaktside
+### Brug kontaktsiden som template
 
 Åbn:
 
@@ -435,7 +500,7 @@ Hvis dit GitHub-brugernavn er `sofieholm`, skal GitHub-linket fx være:
 https://github.com/sofieholm
 ```
 
-### Ret design
+### Brug designet som template
 
 Åbn:
 
@@ -443,7 +508,7 @@ https://github.com/sofieholm
 src/index.css
 ```
 
-Her kan du ændre:
+Her kan du bygge videre på det eksisterende design og ændre:
 
 - farver
 - fonte
