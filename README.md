@@ -1,4 +1,4 @@
-# username.github.io
+# username.github.io - React Portfolio Template
 
 Dette repository er en React portfolio-template til GitHub Pages.
 

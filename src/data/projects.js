@@ -11,13 +11,13 @@ const projects = [
     links: [
       {
         label: "Live site",
-        href: "https://username.github.io",
+        href: "https://race-js.github.io"
       },
       {
         label: "GitHub repo",
-        href: "https://github.com/username/username.github.io",
-      },
-    ],
+        href: "https://github.com/cederdorff/username.github.io"
+      }
+    ]
   },
   {
     slug: "case-study",
@@ -31,10 +31,10 @@ const projects = [
     links: [
       {
         label: "Eksempel-link",
-        href: "https://github.com",
-      },
-    ],
-  },
+        href: "https://github.com"
+      }
+    ]
+  }
 ];
 
 export default projects;
